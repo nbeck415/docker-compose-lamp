@@ -2,6 +2,8 @@ version: "3"
 
 services:
   webserver:
+    labels:
+      shipyard.route: '/'
     build: 
       context: ./bin/${PHPVERSION}
     container_name: '${COMPOSE_PROJECT_NAME}-${PHPVERSION}'
